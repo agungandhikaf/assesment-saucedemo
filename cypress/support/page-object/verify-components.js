@@ -3,10 +3,13 @@ class Verify{
         cy.xpath("//div[@class='login_logo']").should('have.text', text)
     }
     urlPage(){
-        cy.url().should('eq', Cypress.env('BASE_URL'))
+        cy.url().should('eq', Cypress.config('BASE_URL'))
     }
     errorMessage(word){
-        cy.xpath("//h3[@data-test='error']").contain(word)
+        cy.get('.error-message-container').should('contain', word)
+    }
+    successLogin(){
+        cy.xpath("//a[@class='shopping_cart_link']").should('have.attr', 'data-test', 'shopping-cart-link')
     }
 }
 export default Verify

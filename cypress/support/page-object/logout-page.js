@@ -1,7 +1,9 @@
 class Logout{
     doLogout(){
-        cy.xpath("//button[@id='react-burger-menu-btn']").click()
-        cy.xpath("//a[@id='logout_sidebar_link']").click()
+        cy.get('#react-burger-menu-btn').click()
+        cy.get('[data-test="logout-sidebar-link"]').click()
+        // cy.xpath("//button[@id='react-burger-menu-btn']").click()
+        // cy.xpath("//a[@id='logout_sidebar_link']").click()
     }
 }
 
