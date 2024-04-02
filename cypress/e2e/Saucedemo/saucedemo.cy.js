@@ -16,8 +16,9 @@ describe('', () => {
 
     userData.forEach(element => {
         it('Login with ' + element.expected, () => {
-            login.inputUsername(element.username)
-            login.inputPassword(element.password)
+            // login.inputUsername(element.username)
+            // login.inputPassword(element.password)
+            login.loginUser(element.username,element.password)
             login.clickLogin()
             if (element.expected == 'locked user'){
                 verify.errorMessage(element.word)
@@ -29,4 +30,3 @@ describe('', () => {
         });
     });
 });
-/// haloo

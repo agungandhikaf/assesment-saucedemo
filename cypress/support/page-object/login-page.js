@@ -20,6 +20,11 @@ class Login{
     clickLogin(){
         cy.xpath("//input[@id='login-button']").click().wait(2000)
     }
+    loginUser(user,pass){
+        cy.xpath("//input[@id='user-name']").type(user)
+        cy.xpath("//input[@id='password']").type(pass)
+        return this
+    }
 }
 
 export default Login
