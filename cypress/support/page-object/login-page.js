@@ -2,7 +2,7 @@ import Verify from "./verify-components"
 
 const verify = new Verify()
 
-class Login{
+class Login {
     goToPage(){
         cy.visit(`${Cypress.config('BASE_URL')}`)
     }
